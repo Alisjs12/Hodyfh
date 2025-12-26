@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>خدماتنا | HUZAIFA LAB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Cairo:wght@300;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --neon-cyan: #00f2ff; --neon-purple: #bc13fe; --dark-void: #020205; }
+        body { background-color: var(--dark-void); color: #fff; font-family: 'Cairo', sans-serif; overflow-x: hidden; }
+
+        .service-module {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 242, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .service-module:hover {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 40px rgba(0, 242, 255, 0.2);
+            transform: translateY(-8px);
+        }
+
+        /* تأثير المسح الضوئي عند الهوفر */
+        .service-module::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 242, 255, 0.1), transparent);
+            transition: 0.7s;
+            opacity: 0;
+        }
+        .service-module:hover::before {
+            left: 100%;
+            opacity: 1;
+        }
+
+        .service-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-cyan);
+            letter-spacing: 1px;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--neon-cyan);
+            margin-bottom: 20px;
+            display: block;
+            transition: 0.3s;
+        }
+        .service-module:hover .service-icon {
+            transform: scale(1.1);
+            color: var(--neon-purple); /* يتغير لون الأيقونة عند الهوفر */
+        }
+    </style>
+</head>
+<body>
+
+    <header class="py-5 text-center border-bottom border-secondary border-opacity-10">
+        <h1 style="font-family: 'Orbitron'; letter-spacing: 5px;">SERVICE_PROTOCOLS</h1>
+        <p class="text-info">قدرات المختبر المتقدمة في هندسة الأجهزة الذكية</p>
+    </header>
+
+    <div class="container py-5">
+        <div class="row g-4">
+            
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-module text-center">
+                    <i class="fas fa-microchip service-icon"></i>
+                    <h4 class="service-title mb-3">Micro-Soldering</h4>
+                    <p class="small opacity-75">إصلاح المسارات المقطوعة والمكونات الدقيقة على اللوحة الأم بدقة عالية تحت المجهر باستخدام تقنيات الليزر والقصدير السائل.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-module text-center" style="border-color: var(--neon-purple);">
+                    <i class="fas fa-database service-icon" style="color: var(--neon-purple);"></i>
+                    <h4 class="service-title mb-3" style="color: var(--neon-purple);">Data Recovery</h4>
+                    <p class="small opacity-75">استعادة البيانات المفقودة من الأجهزة التالفة كلياً أو المكسورة عبر تقنيات النقل المباشر (Dead Swap).</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-module text-center">
+                    <i class="fas fa-face-id service-icon"></i>
+                    <h4 class="service-title mb-3">Face ID Restoration</h4>
+                    <p class="small opacity-75">إصلاح وحدات حساسات الوجه (Dot Projector & Flood Illuminator) دون فقدان وظائف الأمان الأصلية.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-module text-center" style="border-color: var(--neon-purple);">
+                    <i class="fas fa-stethoscope service-icon" style="color: var(--neon-purple);"></i>
+                    <h4 class="service-title mb-3" style="color: var(--neon-purple);">Advanced Diagnostics</h4>
+                    <p class="small opacity-75">تشخيص دقيق لأعطال الهاردوير والسوفتوير باستخدام مخططات المصنع وأجهزة الفحص المتطورة.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-module text-center">
+                    <i class="fas fa-battery-full service-icon"></i>
+                    <h4 class="service-title mb-3">Power IC Repair</h4>
+                    <p class="small opacity-75">إصلاح مشكلات الشحن السريع، استنزاف البطارية، وتلف دوائر البور الرئيسية.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-module text-center" style="border-color: var(--neon-purple);">
+                    <i class="fas fa-sync-alt service-icon" style="color: var(--neon-purple);"></i>
+                    <h4 class="service-title mb-3" style="color: var(--neon-purple);">Software & Firmware</h4>
+                    <p class="small opacity-75">تحديث الأنظمة، حل مشكلات التعليق، وفتح الأقفال البرمجية بأمان.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
